@@ -1,0 +1,56 @@
+<html>
+	<head>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<title> Anim Test </title>
+	</head>
+
+	<body>
+
+		<div id="parent">
+		</div>
+
+		<div id="playBtn" class="btn"> Play! </div>
+		<div id="advBtn" class="btn"> Advance </div>
+		<div id="stopBtn" class="btn"> Stop! </div>
+
+		<script src="./cat.js"> </script>
+
+		<script>
+
+			var anim = undefined;
+			var parent = document.querySelector('#parent');
+			cat.generate(parent, './anim2.json').then(function(data){
+				data.inject();
+
+				anim = data;
+				anim.animIndex = 0;
+				console.log('anim', anim);
+			});
+
+			document.querySelector('#playBtn').addEventListener('click', function(){
+				console.log('CLICK!')
+				// anim.play(0).then(function(){
+				// 	anim.play(1)
+				// });
+				anim.playAll();
+			});
+			document.querySelector('#stopBtn').addEventListener('click', function(){
+				console.log('STOP')
+				anim.stop();
+			})
+			document.querySelector('#advBtn').addEventListener('click', function(){
+				console.log('ADV');
+				anim.play(anim.animIndex);
+				anim.animIndex += 1;
+				if (anim.animIndex >= anim.durations.length){
+					anim.animIndex = 0;
+				}
+			})
+
+
+		</script>
+
+	</body>
+</html>

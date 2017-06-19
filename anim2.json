@@ -1,0 +1,48 @@
+{ 
+	"type": "animation",
+	"name": "sample",
+	"durations": [
+		1000,
+		5000
+	],
+
+	"components": [
+		{
+			"id": "tuna",
+			"styles": {
+				"width": "100px",
+				"height": "100px",
+				"margin-left": "-50px",
+				"position": "absolute",
+				"background-color": "blue"
+			},
+			"keyframes": [
+				{
+					"0" : {
+						"left": "0px",
+						"top": "0px"
+					},
+					"50": {
+						"left": "100%",
+						"top": "50px"
+					},
+					"100": {
+						"left": "50%",
+						"top": "50px"
+					}	
+				}, 
+				{
+					"0": {
+						"left": "50%",
+						"top": "50px"
+					}, 
+					"100": {
+						"left": "75%",
+						"top":"0%"
+					}
+				}
+
+			]
+		}
+	]
+}

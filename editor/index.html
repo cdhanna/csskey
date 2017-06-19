@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="all.css">
+		<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Dekko" rel="stylesheet">
+
+		<!-- 
+			font-family: 'Dekko', cursive;
+			font-family: 'Bree Serif', serif;
+		 -->
+
+		<title> Animator </title>
+	</head>
+
+	<body>
+
+		<div id="title">
+			<h1> CSS Animator </h1>
+		</div>
+
+		<div id="main">
+
+			<div id="left-toolbar">
+				<div id="addBtn" class="btn">
+					New Div
+				</div>
+
+				<div id="component-editor">
+					<h2> Component Details</h2>
+					<div id="name">
+						<input type="text" placeholder="[Enter ID]">
+					</div>
+					<textarea id="styles" 
+						spellcheck="false">
+						<!-- ... -->
+					</textarea>
+					<div id="refreshBtn" class="btn">
+						Refresh
+					</div>
+				</div>
+			</div>
+
+			<div id="editor-parent">
+			</div>
+
+		</div>
+
+		<div id="timeline">
+		</div>
+
+		<script src="./src/core/core.js"> </script>
+		<script src="./src/toolbar/toolbar.js"> </script>
+
+	</body>
+
+</html>

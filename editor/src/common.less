@@ -1,0 +1,49 @@
+@primary-color: #FF8D06;
+
+body {
+	background-color: @primary-color;
+}
+
+.btn {
+	background: white;
+	color: black;
+	padding: 6px 12px;
+	min-width: 85px;
+	border-radius: 8px;
+	border: solid 4px black;
+	font-family: 'Bree Serif', serif;
+	font-size: 18pt;
+
+	cursor: pointer;
+	text-transform: uppercase;
+	&:hover {
+		background: #FFC600;
+	}
+}
+
+
+.textoutline {
+	@size: 3px;
+	text-shadow: -@size -@size 0 black,
+				  @size -@size 0 black,
+				 -@size  @size 0 black,
+				  @size  @size 0 black;
+
+}
+
+.component {
+	cursor: pointer;
+	&:hover {
+		outline: solid 3px black;
+		&:after {
+			content: '#' attr(id);
+			.textoutline;
+			color: white;
+			font-family: 'Bree Serif', serif;
+			font-size: 18pt;
+			position: relative;
+			top: -35px;
+			white-space: nowrap;
+		}
+	}
+}

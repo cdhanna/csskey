@@ -1,0 +1,55 @@
+@keyframes test {
+	0% {
+		top: 0px;
+		left: 0px;
+	}
+	25% {
+		left: 100px;
+		top: 0px;
+	}
+	50% {
+		left: 100px;
+		top: 100px;
+	}
+	75% {
+		left: 0px;
+		top: 100px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+@keyframes test2 {
+	0% {
+		top: 0px;
+		left: 0px;
+
+	}
+	100% {
+		top: 300px;
+		left: 300px;
+	}
+}
+
+.btn {
+	background-color: #E5E5E5;
+	color: black;
+	border: solid 1px black;
+	display: inline-block;
+	min-width: 100px;
+	text-align: center;
+	font-size: 16px;
+	padding: 4px;
+	cursor: pointer;
+}
+.btn:hover {
+	background-color: #BEBEBE;
+}
+
+#parent {
+	background-color: #FEC791;
+	width: 50%;
+	height: 200px;
+}
